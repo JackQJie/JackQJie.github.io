@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>美丽凸围-首页</title>
+</head>
+<link rel="stylesheet" href="style/nav.css" />
+<style>
+  .banner {
+    width: 100%;
+    padding-bottom: 41.66%;
+    background: url('image/index/banner.png') no-repeat center/contain;
+  }
+
+  .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .title img {
+    margin: 30px auto 50px;
+    width: 60.6%;
+  }
+
+  .card-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 70px 0;
+  }
+
+  .card-list .card-item {
+    width: 280px;
+    height: 390px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #ca0000;
+    color: #ffffff;
+  }
+
+  .card-list .card-item:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  .card-list .card-item .card-img {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  .card-list .card-item .card-desc {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .card-list .card-item .card-desc p {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .card-list .card-item .card-desc h5 {
+    margin-top: 5px;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .card-list .card-item .card-desc i {
+    display: block;
+    margin: 10px auto 0;
+    background-color: #ffffff;
+    width: 55px;
+    height: 2px;
+  }
+
+  .progress-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+  }
+
+  .progress-box .progress-item {
+    width: 190px;
+    height: 190px;
+  }
+
+  .progress-box .arrow {
+    width: 23px;
+    height: 27px;
+    margin: 0 20px;
+    background: url('image/index/arrow.png') no-repeat center/contain;
+  }
+
+  .promise-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 268px;
+    background: #ca0000 url('image/index/promise-bg.png') no-repeat center/cover;
+  }
+
+  .promise-box .promise-title {
+    width: 174px;
+    height: 144px;
+    background: url('image/index/promise-title.png') no-repeat center/contain;
+  }
+
+  .promise-box .promise-title p {
+    display: none;
+  }
+
+  .promise-box .promise-line {
+    width: 2px;
+    height: 230px;
+    background-color: #ffffff;
+    margin: 0 60px;
+  }
+
+  .promise-box .promise-desc {
+    width: 45.7%;
+    max-width: 878px;
+  }
+
+  .promise-box .promise-desc img {
+    width: 100%;
+  }
+
+  .info-box {
+    width: 100%;
+    padding: 80px 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+  }
+
+  .info-box .info-left,
+  .info-box .info-right {
+    width: 600px;
+  }
+
+  .info-box .info-left {
+    margin-right: 50px;
+  }
+
+  .info-box img {
+    width: 100%;
+  }
+
+  .pm-box {
+    width: 100%;
+    position: relative;
+  }
+
+  .pm-box .pm-bg {
+    width: 100%;
+    height: 560px;
+    background-color: #ca0000;
+    padding-top: 70px;
+  }
+
+  .pm-box .pm-bg .title {
+    background-color: transparent;
+
+  }
+
+  .pm-box .pm-bg-w {
+    width: 100%;
+    height: 1200px;
+    background-color: #ffffff;
+  }
+
+  .pm-box .pm-img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    top: 260px;
+  }
+
+  .pm-box .pm-img img {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .pm-box .pm-img img:first-child {
+    margin-bottom: 120px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .title img {
+      margin: 10px auto 20px;
+      width: 98%;
+    }
+
+    .card-list {
+      width: 100%;
+      padding: 0 10px 10px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card-list .card-item {
+      width: 48%;
+      height: auto;
+      margin-top: 15px;
+    }
+
+    .card-list .card-item .card-desc {
+      margin-top: 20px;
+    }
+
+    .card-list .card-item .card-img {
+      height: 0;
+      padding-bottom: 100%;
+    }
+
+    .card-list .card-item .card-desc p {
+      font-size: 12px;
+    }
+
+    .card-list .card-item .card-desc h5 {
+      font-size: 24px;
+    }
+
+    .card-list .card-item:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .progress-box {
+      width: 100%;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    .progress-box .progress-item {
+      width: 25%;
+      padding-bottom: 25%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .progress-box .progress-item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .progress-box .arrow {
+      display: none;
+    }
+
+    .promise-box {
+      flex-direction: column;
+      padding: 20px 0;
+      height: auto;
+    }
+
+    .promise-box .promise-title {
+      width: 100%;
+      height: auto;
+      background: none;
+    }
+
+    .promise-box .promise-title p {
+      text-align: center;
+      display: block;
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .promise-box .promise-line {
+      display: none;
+      width: 230px;
+      height: 2px;
+      background-color: #ffffff;
+      margin: 30px 0px;
+    }
+
+    .promise-box .promise-desc {
+      width: 94%;
+      max-width: 878px;
+    }
+
+    .info-box {
+      padding: 20px;
+      flex-direction: column-reverse;
+    }
+
+    .info-box .info-left,
+    .info-box .info-right {
+      width: 100%;
+    }
+
+    .info-box .info-left {
+      margin-right: 0px;
+      margin-top: 10px;
+    }
+
+    .info-box img {
+      width: 100%;
+    }
+
+    .pm-box .pm-bg {
+      height: auto;
+      padding: 20px 0;
+    }
+
+    .pm-box .pm-bg-w {
+      display: none;
+    }
+
+    .pm-box .pm-img {
+      width: 100%;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      position: static;
+      flex-direction: column;
+      top: 0px;
+    }
+
+    .pm-box .pm-img img {
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .pm-box .pm-img img:first-child {
+      margin-bottom: 10px;
+    }
+  }
+</style>
+
+<body>
+  <div class="menu">
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menuto-trigger" for="menu-toggle"></label>
+    <label class="menuto-burger" for="menu-toggle"></label>
+    <ul class="menu-body">
+      <li class="menu-item">
+        <a href="index.html">首页</a>
+      </li>
+      <li class="menu-item">
+        <a href="culture.html">企业文化</a>
+      </li>
+      <li class="menu-item">
+        <a href="detail.html">项目详情</a>
+      </li>
+      <li class="menu-item">
+        <a href="brand.html">品牌优势</a>
+      </li>
+      <li class="menu-item">
+        <a href="join.html">加入我们</a>
+      </li>
+    </ul>
+  </div>
+  <header>
+    <img src="image/logo.png" alt="logo" class="logo" />
+    <ul class="nav">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="culture.html">企业文化</a></li>
+      <li><a href="detail.html">项目详情</a></li>
+      <li><a href="brand.html">品牌优势</a></li>
+      <li><a href="join.html">加入我们</a></li>
+    </ul>
+    <div class="phone">
+      <img src="image/phone.png" alt="phone" />
+      <a href="tel:400-808-7033">400-808-7033</a>
+    </div>
+  </header>
+  <section class="wraper">
+    <div class="banner"></div>
+    <div class="title title-one">
+      <img src="image/index/title1.png" alt="专业团队" />
+    </div>
+    <div class="card-list">
+      <div class="card-item">
+        <div class="card-img" style="background: url('image/index/card1.png') no-repeat center/contain"></div>
+        <div class="card-desc">
+          <p>METHODOLOGICAL SCIENCE</p>
+          <h5>方法科学</h5>
+          <i></i>
+        </div>
+      </div>
+      <div class="card-item">
+        <div class="card-img" style="background: url('image/index/card2.png') no-repeat center/contain"></div>
+        <div class="card-desc">
+          <p>SKILL SPECIALIZATION</p>
+          <h5>技能专业</h5>
+          <i></i>
+        </div>
+      </div>
+      <div class="card-item">
+        <div class="card-img" style="background: url('image/index/card3.png') no-repeat center/contain"></div>
+        <div class="card-desc">
+          <p>EXPERIENCED MANAGEMENT</p>
+          <h5>管理有效</h5>
+          <i></i>
+        </div>
+      </div>
+      <div class="card-item">
+        <div class="card-img" style="background: url('image/index/card4.png') no-repeat center/contain"></div>
+        <div class="card-desc">
+          <p>STRONG EXECUTION</p>
+          <h5>执行有力</h5>
+          <i></i>
+        </div>
+      </div>
+    </div>
+    <div class="title title-two">
+      <img src="image/index/title2.png" alt="专业团队" />
+    </div>
+    <div class="progress-box">
+      <div class="progress-item" style="background: url('image/index/progress-1.png') no-repeat center/contain"></div>
+      <i class="arrow"></i>
+      <div class="progress-item" style="background: url('image/index/progress-2.png') no-repeat center/contain"></div>
+      <i class="arrow"></i>
+      <div class="progress-item" style="background: url('image/index/progress-3.png') no-repeat center/contain"></div>
+      <i class="arrow"></i>
+      <div class="progress-item" style="background: url('image/index/progress-4.png') no-repeat center/contain"></div>
+      <i class="arrow"></i>
+      <div class="progress-item" style="background: url('image/index/progress-5.png') no-repeat center/contain"></div>
+    </div>
+    <div class="promise-box">
+      <div class="promise-title">
+        <p>我们的承诺</p>
+      </div>
+      <div class="promise-line"></div>
+      <div class="promise-desc">
+        <img src="image/index/promise-desc.png" alt="" />
+      </div>
+    </div>
+    <div class="info-box">
+      <div class="info-left">
+        <img src="image/index/info-left.png" alt="" />
+      </div>
+      <div class="info-right">
+        <img src="image/index/info-right.png" alt="" />
+      </div>
+    </div>
+    <div class="pm-box">
+      <div class="pm-bg">
+        <div class="title title-three">
+          <img src="image/index/pm-title.png" alt="">
+        </div>
+      </div>
+      <div class="pm-bg-w">
+
+      </div>
+      <div class="pm-img">
+        <img src="image/index/pm-1.png" alt="">
+        <img src="image/index/pm-2.png" alt="">
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="qr-code">
+      <div class="qr-1">
+        <img src="image/index/qr-1.png" alt="">
+        <p>官方微信</p>
+      </div>
+      <div class="qr-2">
+        <img src="image/index/qr-2.png" alt="">
+        <p>官方公众号</p>
+      </div>
+    </div>
+    <p class="tel-text">联系我们：<a href="tel:400-808-7033">400-808-7033</a></p>
+  </footer>
+</body>
+
+</html>

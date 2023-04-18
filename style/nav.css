@@ -1,0 +1,346 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-size: 1em;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    background-color: #bc0509;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8.6% 0 13.5%;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.logo {
+    width: 220px;
+    margin-right: 5.5%;
+}
+.nav {
+    list-style: none;
+    display: flex;
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 1.2;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav li {
+    cursor: pointer;
+}
+.phone {
+    display: flex;
+    align-items: center;
+    margin-left: 5.5%;
+}
+.phone img {
+    width: 37px;
+    height: 36px;
+    margin-right: 10px;
+}
+.phone a {
+    font-size: 17px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.menu {
+  display: none;
+}
+
+.wraper {
+  margin-top: 80px;
+}
+
+
+footer {
+  width: 100%;
+  height: 800px;
+  background-color: #ca0000;
+  text-align: center;
+  border-top: 1px solid #ca0000;
+}
+footer .qr-code {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .qr-code .qr-1,
+footer .qr-code .qr-2{
+  width: 260px;
+}
+footer .qr-code .qr-1 {
+  margin-right: 330px;
+}
+footer .qr-code img {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+footer .qr-code p {
+  color: #ffffff;
+  font-size: 24px;
+}
+footer .tel-text {
+  color: #ffffff;
+  font-size: 34px;
+}
+
+@media screen and (max-width: 1280px) {
+    header {
+        height: 80px;
+    }
+    .nav {
+        display: none;
+    }
+    .phone img {
+        width: 20px;
+        height: 20px;
+    }
+    .phone a {
+        font-size: 15px;
+    }
+    .logo {
+        margin-left: 10px;
+        width: 80px;
+    }
+    .main {
+        margin-top: 58px;
+    }
+    .menu {
+      display: block;
+    }
+    
+    
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  footer .qr-code {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
+  footer .qr-code .qr-1,
+  footer .qr-code .qr-2{
+    width: 100%;
+  }
+  footer .qr-code .qr-1 {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  footer .qr-code img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  footer .tel-text {
+    font-size: 24px;
+  }
+}
+
+
+/* 汉堡菜单样式 */
+#menu-toggle[type="checkbox"]:not(:checked),
+#menu-toggle[type="checkbox"]:checked {
+  display: none;
+}
+
+.menuto-trigger,
+.menuto-burger,
+.menuto-burger:before,
+.menuto-burger:after {
+  position: absolute;
+  top: 1.8em;
+  left: 1.2em;
+  width: 2em;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+
+.menuto-trigger {
+  height: 2em;
+  background: none;
+}
+
+.menuto-burger:before {
+  content: "";
+  top: 10px;
+  left: 0;
+}
+.menuto-burger:after {
+  content: "";
+  top: 20px;
+  left: 0;
+}
+
+.menu-body {
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  margin: 0;
+  padding: 0;
+  /* background-color: #fff; */
+  border-bottom-right-radius: 100%;
+  /* box-shadow: 3px 3px 7px rgba(40, 40, 40, 0.2); */
+  z-index: 10;
+  -webkit-animation: shrink 0.35s both;
+          animation: shrink 0.35s both;
+}
+
+.menu-item,
+.item-link {
+  display: none;
+  margin: 4.4em 0 -3.3em -.1em;
+  font-weight: normal;
+  color: #282828;
+  text-decoration: none;
+  text-transform: none;
+  list-style: none;
+  outline: 0;
+}
+
+.menu-item {
+  text-indent: 2em;
+  font-size: 1.5em;
+}
+
+.item-link:hover {
+  display: block;
+  width: 0;
+  color: #282828;
+  background-color: #98A392;
+  -webkit-animation: filling 0.3s both;
+          animation: filling 0.3s both;
+}
+
+/*汉堡图标变换*/
+#menu-toggle:checked + .menuto-trigger + .menuto-burger {
+  top: 35px;
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+  -webkit-transition: -webkit-transform 0.35s ease;
+  transition: -webkit-transform 0.35s ease;
+  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+#menu-toggle:checked + .menuto-trigger + .menuto-burger:before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform 0.35s ease;
+  transition: -webkit-transform 0.35s ease;
+  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+#menu-toggle:checked + .menuto-trigger + .menuto-burger:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.35s ease;
+  transition: -webkit-transform 0.35s ease;
+  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+/*菜单展开*/
+#menu-toggle:checked + .menuto-trigger + .menuto-burger + .menu-body {
+  background-color: #bc0509;
+  -webkit-animation: expand 1s ease both;
+          animation: expand 1s ease both;
+}
+#menu-toggle:checked + .menuto-trigger ~ .menu-body .menu-item, 
+#menu-toggle:checked + .menuto-trigger ~ .menu-body .item-link {
+  display: block;
+}
+
+.promotion {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #DDC9A8, #AFB8B3);
+}
+
+@-webkit-keyframes expand {
+  50% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+@keyframes expand {
+  50% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+@-webkit-keyframes shrink {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@keyframes shrink {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@-webkit-keyframes filling {
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes filling {
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
